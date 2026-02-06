@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
 async function sendEmail({ to,cc, subject, html, attachment, filename }) {
   try {
     const mailOptions = {
-      from: `${COMPANY.NAME} || StockwiseIq <${process.env.SMTP_USER}>`,
+      from: `${COMPANY.NAME} || Trading Brain4U <${process.env.SMTP_USER}>`,
       to,
       cc, 
       subject,
