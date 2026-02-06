@@ -29,7 +29,7 @@ exports.sendOtp = async (req, res) => {
       
       from: `${COMPANY.NAME} <${process.env.SMTP_USER}>`,
       to: email,
-      subject: "Your One-Time Password (OTP) - StockwiseIq",
+      subject: "Your One-Time Password (OTP) - Trading Brain4U",
       html: `
         <div style="font-family: Arial, sans-serif; padding: 15px; color: #333;">
           <h3 style="color:#1F3B77;">${COMPANY.NAME}</h3>
