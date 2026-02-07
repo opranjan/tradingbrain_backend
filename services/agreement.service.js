@@ -660,7 +660,10 @@ doc
   .text(email, leftMargin + 120, sigTop + 22)
   .text(agreementDate, leftMargin + 120, sigTop + 44)
   .text(ipAddress || "Not Captured", leftMargin + 120, sigTop + 66)
-  .text(location || "Not Captured", leftMargin + 120, sigTop + 88);
+  .text(location || "Not Captured", leftMargin + 120, sigTop + 88, {
+    width: width - 140,
+    align: "left",
+  });
 
 // Note (subtle)
 doc.moveDown(9);
