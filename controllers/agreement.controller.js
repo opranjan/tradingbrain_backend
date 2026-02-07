@@ -139,11 +139,11 @@ const clientLocation = getClientLocation(req);
     submission.agreementAcceptedAt = new Date();
     submission.agreementIp = getClientIp(req);
 
-submission.location = `${clientLocation.city || "Unknown City"}, ${
-  clientLocation.region || "Unknown Region"
-}, ${clientLocation.country || "Unknown Country"} | Lat: ${
-  clientLocation.latitude ?? "NA"
-}, Lng: ${clientLocation.longitude ?? "NA"}`;
+// submission.location = `${clientLocation.city || "Unknown City"}, ${
+//   clientLocation.region || "Unknown Region"
+// }, ${clientLocation.country || "Unknown Country"} | Lat: ${
+//   clientLocation.latitude ?? "NA"
+// }, Lng: ${clientLocation.longitude ?? "NA"}`;
 
 
     await submission.save();
@@ -234,7 +234,7 @@ async function getAgreementPdfByEmail(req, res) {
     res.setHeader("Content-Type", "application/pdf");
     res.setHeader(
       "Content-Disposition",
-      `inline; filename=User_Agreement_${submission.txnId || "Optionbricks"}.pdf`
+      `inline; filename=User_Agreement_${submission.txnId || "tradingbrain4u"}.pdf`
     );
 
     return res.send(pdfBuffer);

@@ -58,6 +58,7 @@ async function submit(req, res) {
       agentName: req.body.agentName,
       panDoc: panDocMeta,
       aadharDoc: aadharDocMeta,
+      location: req.body.location,
     });
 
     // Generate invoice PDF in memory
